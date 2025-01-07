@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1736217995994,
+    "numCorredores": 5,
+    "distancia": 10,
+    "tiempo": 1,
+    "posiciones": [
+      {
+        "id": 1,
+        "velocidad": 10,
+        "posicion": 10
+      },
+      {
+        "id": 2,
+        "velocidad": 12,
+        "posicion": 12
+      },
+      {
+        "id": 3,
+        "velocidad": 14,
+        "posicion": 14
+      },
+      {
+        "id": 4,
+        "velocidad": 14,
+        "posicion": 14
+      },
+      {
+        "id": 5,
+        "velocidad": 8,
+        "posicion": 8
+      }
+    ],
+    "ganador": {
+      "id": 1,
+      "velocidad": 10,
+      "posicion": 10
+    }
+  },
+  {
+    "id": 1736218034070,
+    "numCorredores": 4,
+    "distancia": 5,
+    "tiempo": 1,
+    "posiciones": [
+      {
+        "id": 1,
+        "velocidad": 12,
+        "posicion": 12
+      },
+      {
+        "id": 2,
+        "velocidad": 9,
+        "posicion": 9
+      },
+      {
+        "id": 3,
+        "velocidad": 6,
+        "posicion": 6
+      },
+      {
+        "id": 4,
+        "velocidad": 14,
+        "posicion": 14
+      }
+    ],
+    "ganador": {
+      "id": 1,
+      "velocidad": 12,
+      "posicion": 12
+    }
+  }
+]
