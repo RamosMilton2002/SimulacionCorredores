@@ -73,20 +73,24 @@ app.get('/', (req, res) => {
     carreras.push(nuevaCarrera);
     writeDB(carreras);
 
-    res.send(`
-        <h1>Carrera Creada y Guardada</h1>
-        <p>ID de la Carrera: ${nuevaCarrera.id}</p>
-        <p>Distancia: ${distancia} km</p>
-        <p>Tiempo total: ${tiempo} horas</p>
-        <h2>Posiciones finales:</h2>
-        <ul>
-            ${posiciones
-                .map(c => `<li>Corredor ${c.id}: ${c.posicion.toFixed(2)} km (Velocidad: ${c.velocidad} km/h)</li>`)
-                .join('')}
-        </ul>
-        <h2>Ganador:</h2>
-        <p>Corredor ${ganador.id} con una velocidad de ${ganador.velocidad} km/h.</p>
-    `);
+    res.json({
+        mensaje: "Carrera Creada y Guardada",
+        carrera: {
+            id: nuevaCarrera.id,
+            distancia: distancia,
+            tiempoTotal: tiempo,
+        },
+        posicionesFinales: posiciones.map(c => ({
+            corredorId: c.id,
+            posicion: c.posicion.toFixed(2),
+            velocidad: c.velocidad
+        })),
+        ganador: {
+            corredorId: ganador.id,
+            velocidad: ganador.velocidad
+        }
+    });
+    
 });
 
 // Ruta para obtener todas las carreras
